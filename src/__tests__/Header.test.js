@@ -8,9 +8,9 @@ test("displays the toggle button", () => {
 });
 
 test("calls the onDarkModeClick callback prop when the button is clicked", () => {
-  const onDarkModeClick = jest.fn();
-  render(<Header onDarkModeClick={onDarkModeClick} />);
+  const handleDarkModeClick = jest.fn();
+  render(<Header onDarkModeClick={handleDarkModeClick} />);
 
   fireEvent.click(screen.queryByText(/ Mode/));
-  expect(onDarkModeClick).toHaveBeenCalled();
+  expect(handleDarkModeClick).toHaveBeenCalled();
 });
